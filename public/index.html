@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS - Learning Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Item Management</h1>
+
+        <!-- ADD ITEM FORM -->
+        <div class="form-container">
+            <h2 id="form-title">Add Item</h2>
+            <form id="item-form">
+                <input type="hidden" id="item-id">
+
+                <label for="name">Item Name</label>
+                <input type="text" id="name" required>
+
+                <label for="description">Description</label>
+                <textarea id="description"></textarea>
+
+                <label for="price">Price</label>
+                <input type="number" id="price" step="0.01" required>
+
+                <label for="inStock">
+                    <input type="checkbox" id="inStock">
+                    In Stock
+                </label>
+
+                <button type="submit">Save Item</button>
+                <button type="button" id="cancel-button" onclick="cancelEdit()" style="display: none; margin-left: 10px;">Cancel</button>
+            </form>
+        </div>
+
+        <!-- ITEM LIST -->
+        <h2>Item List</h2>
+        <div id="item-list">
+            <p>Loading items...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
